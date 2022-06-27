@@ -1,0 +1,17 @@
+.sign-in{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+width: 100%;
+height: 100%;
+
+background: var(--back-box-color);
+}
+
+
+header{
+  text-align: center;
+  margin: 2rem;
+}
+
+

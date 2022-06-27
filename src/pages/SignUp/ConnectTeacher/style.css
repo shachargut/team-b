@@ -1,0 +1,43 @@
+.page {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+
+  background: #ffffff;
+}
+.card1 {
+  border: 1px solid black;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 400px;
+  width: 600px;
+  background: #9f12d7;
+  overflow: hidden;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 20px 8px #d0d0d0;
+  transform: rotate(-5deg);
+}
+.card2 {
+  box-shadow: 0, 5, 0, 5 #9f12d7;
+  border: 1px solid black;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 400px;
+  width: 600px;
+  background: rgb(173, 95, 95);
+  overflow: visible;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 20px 8px #d0d0d0;
+  transform: rotate(5deg);
+  text-align: justify;
+  color: black;
+  padding: 10px;
+
+  font-family: "Merriweather", serif;
+}

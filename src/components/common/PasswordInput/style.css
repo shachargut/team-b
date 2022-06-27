@@ -1,0 +1,30 @@
+fieldset {
+  border: 1px solid var(--main-title-color);
+  border-radius: 0.8rem;
+  height: 11vh;
+  margin: 1rem;
+}
+.password-input {
+  box-sizing: border-box;
+  position: relative;
+  width: 85%;
+  height: 90%;
+  /* padding: 1rem; */
+  /* font-weight: 600; */
+  font-size: 30px;
+  /* line-height: 2rem; */
+  background: #ffff;
+  border: none;
+  outline: 0;
+}
+legend {
+  padding: 0.2em 0.5em;
+  color: var(--main-title-color);
+  font-size: 90%;
+  position: relative;
+  margin-left: -6rem;
+}
+.hide-icon {
+  font-size: 25px;
+  color: #55575a;
+}

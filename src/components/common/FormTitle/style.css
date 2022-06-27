@@ -1,0 +1,11 @@
+.FormTitle {
+  width: 192px;
+  height: 25px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  color: #252525;
+  margin-left: 23%;
+  margin-top: 15px;
+}

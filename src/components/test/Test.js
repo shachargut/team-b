@@ -1,11 +1,7 @@
-import PushupInstructions from "../../common/PushUpInstructions";
-
 function Test() {
-  return (
-    <>
-      <PushupInstructions />
+    return <>
+       
     </>
-  );
 }
 
 export default Test;
