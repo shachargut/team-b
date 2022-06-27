@@ -1,11 +1,11 @@
-
 import Header from "./Header";
 import Nav from "./Nav";
 import Popup from "./Popup";
 import { Outlet, Route, Routes } from "react-router-dom";
 import Test from "../test/Test";
-
-
+import PushUpInstructions from "../Common/PushUpInstructions";
+import PushUpTimer from "../Common/PushUpTimer";
+import BookInfo from "../Common/BookInfo";
 
 function Main() {
   return (
@@ -20,9 +20,10 @@ function Main() {
         </Route>
 
         {/* Team B */}
-        <Route path="teams-path">
-          <Route index element={<>team's components</>} />
-          <Route path="components-path" element={<>team's components</>} />
+        <Route path="train-reading">
+          <Route index element={<BookInfo />} />
+          <Route path="instructions" element={<PushUpInstructions />} />
+          <Route path="timer" element={<PushUpTimer />} />
         </Route>
 
         {/* Team C */}
@@ -61,11 +62,8 @@ function Main() {
           <Route path="components-path" element={<>team's components</>} />
         </Route>
 
-
         {/* Test */}
-        <Route path='/test' element={<Test />} />
-
-
+        <Route path="/test" element={<Test />} />
       </Routes>
 
       <Nav />
