@@ -1,0 +1,26 @@
+.GGG {
+    height: 300px;
+    background-color: rgb(255, 229, 195);
+    top: 40%;
+}
+
+.Select {
+    top: 10%;
+    position: absolute;
+}
+
+.Tabs {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 100px;
+    justify-content: center;
+}
+
+.Tab {
+    background-color: darkcyan;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    justify-content: center;
+}

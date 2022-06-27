@@ -1,11 +1,8 @@
-import BookInfo from "../../common/BookInfo"
-import Popup from "../layout/Popup/Popup"
-
+import BookInfo from '../Common/BookInfo'
 function Test() {
     return <>
-        <Popup />
+        <BookInfo />
     </>
 }
 
-
-export default Test
+export default Test;

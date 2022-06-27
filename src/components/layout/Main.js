@@ -1,51 +1,80 @@
-import Test from "../test/Test";
+
 import Header from "./Header";
 import Nav from "./Nav";
-import Popup from "./Popup/Popup";
-import { Outlet, Route, Routes } from "react-router-dom"
-import Context from "../../context";
+import Popup from "./Popup";
+import { Outlet, Route, Routes } from "react-router-dom";
+import Test from "../test/Test";
+import PushUpInstructions from '../Common/PushUpInstructions'
+import BookInfo from "../Common/BookInfo";
+
 
 
 function Main() {
+  return (
+    <>
+      <Header />
 
-    return <>
-        <Context>
-            <Header />
-            <Routes>
+      <Routes>
+        {/* Team A */}
+        <Route path="teams-path">
+          <Route index element={<>team's components</>} />
+          <Route path="components-path" element={<>team's components</>} />
+        </Route>
 
-                {/* sign */}
-                <Route path="sign-up" >
-                    <Route index element={<>sign up</>} />
-                    <Route path="connect-teacher" element={<>connect teacher</>} />
-                </Route>
+        {/* Team B */}
+        <Route path="train-reading">
+          <Route index element={<Popup />} />
+          <Route path="book-info" element={<BookInfo />} />
+          <Route path="instructions" element={<PushUpInstructions />} />
+        </Route>
 
-                {/* student */}
-                <Route path="/student" element={<><h1> protected - route - student  </h1><Outlet /></>}>
-                    <Route path="focus-train">
-                        <Route index element={<>focus-train</>} />
-                        <Route path="exercise" element={<>exercise</>} />
-                    </Route>
+        {/* Team C */}
+        <Route path="teams-path">
+          <Route index element={<>team's components</>} />
+          <Route path="components-path" element={<>team's components</>} />
+        </Route>
 
-                </Route>
+        {/* Team D */}
+        <Route path="teams-path">
+          <Route index element={<>team's components</>} />
+          <Route path="components-path" element={<>team's components</>} />
+        </Route>
 
-                {/* teacher */}
-                <Route path="/teacher" element={<><h1> protected - route - teacher  </h1><Outlet /></>}>
-                    <Route path="view-create" element={<>view-create</>} />
-                    <Route path="class" element={<>class</>} />
-                </Route>
+        {/* Team E */}
+        <Route path="teams-path">
+          <Route index element={<>team's components</>} />
+          <Route path="components-path" element={<>team's components</>} />
+        </Route>
 
-                {/* admin - desktop*/}
-                <Route path="/admin" element={<><h1> protected - route - admin  </h1><Outlet /></>}>
-                    <Route path="add-remove-teacher" element={<>add-remove-teacher</>} />
-                </Route>
+        {/* Team F */}
+        <Route path="teams-path">
+          <Route index element={<>team's components</>} />
+          <Route path="components-path" element={<>team's components</>} />
+        </Route>
 
-                <Route path='/test' element={<Test />} />
-            </Routes>
-            <Nav />
-            <Popup />
-        </Context>
+        {/* Team G */}
+        <Route path="teams-path">
+          <Route index element={<>team's components</>} />
+          <Route path="components-path" element={<>team's components</>} />
+        </Route>
 
+        {/* Team H */}
+        <Route path="teams-path">
+          <Route index element={<>team's components</>} />
+          <Route path="components-path" element={<>team's components</>} />
+        </Route>
+
+
+        {/* Test */}
+        <Route path='/test' element={<Test />} />
+
+
+      </Routes>
+
+      <Nav />
+      <Popup />
     </>
+  );
 }
 
-export default Main
+export default Main;

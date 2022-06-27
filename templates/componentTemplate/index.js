@@ -1,4 +1,5 @@
-import styles from './style.module.css'
+// import styles from './style.module.css'
+import './style.css'
 
 // Creator : Team A - Shahar
 function Temp(){
