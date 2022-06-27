@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src/components/layout/Main.js
 import Header from "./Header";
 import Nav from "./Nav";
 import Popup from "./Popup";
@@ -6,12 +7,23 @@ import Test from "../test/Test";
 import PushUpInstructions from "../Common/PushUpInstructions";
 import PushUpTimer from "../Common/PushUpTimer";
 import BookInfo from "../Common/BookInfo";
+=======
+import Test from "../../test/Test";
+import Header from "../header";
+import Nav from "../Nav";
+import Popup from "../popup/Popup";
+import { Outlet, Route, Routes } from "react-router-dom"
+import TextArea from "../common/TextArea/Index";
+import Context from "../../../context";
+
+>>>>>>> 67480f9c441bcb10a0bd8ce910d0742857bd762c:src/components/layout/Main/index.js
 
 function Main() {
   return (
     <>
       <Header />
 
+      {/* content */}
       <Routes>
         {/* Team A */}
         <Route path="teams-path">

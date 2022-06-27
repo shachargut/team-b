@@ -1,0 +1,31 @@
+.form-group {
+    padding: 10px;
+    /* border: 1px solid #7D839D; */
+    margin: 10px;
+
+}
+
+.form-group>label {
+    position: absolute;
+    top: 5px;
+    margin-left: 20px;
+    background-color: white;
+    z-index: 3;
+}
+
+/* .form-group>input {
+    border: none;
+} */
+
+.form-control {
+
+    /* box-sizing: border-box; */
+
+    position: relative;
+    width: 382px;
+    height: 60px;
+
+    background: #FFFFFF;
+    border: 1px solid #7D839D;
+    border-radius: 12px;
+}

@@ -14,6 +14,31 @@
     <title>ReadMate</title>
   </head>
   <body>
+    <!-- UMOOVE LIBRARY CODE --> 
+    <div class="wasm_load_div" id="wasm_load_div" style="visibility: hidden; position: absolute;left: 0px;top: 0px;"></div>
+    <!-- Necessary wasm preloading -->
+    <script  type="text/Javascript" src="./umoove_wasm/wasm_load.js" ></script>
+    <!-- Umoove Library -->
+    <script async type="text/Javascript" src="./umoove_wasm/umoove_eye.js"></script>
+    <!-- Umoove Video management and interface -->
+    <script type="text/JavaScript" src="./umoove_wasm/umoove_load_eye.js"></script>
+    
+    <div class="cameraWindow"><video id="video" class="video" width = "640" height = "480" style="display: none"></video></div>
+
+    <script>
+        var currentUmooveResults = []
+        var readingData = []
+        var newData = false
+        var collectData = false
+        var newUmooveData = (umoooveResults) => {
+                newData = true;
+                currentUmooveResults = umoooveResults;
+                if(collectData){
+                  readingData.push({time:Date.now(),eye_data:umoooveResults})
+                }
+              };
+    </script>
+    <!-- END UMOOVE LIBRARY CODE -->
     <div id="root"></div>
   </body>
 </html>
