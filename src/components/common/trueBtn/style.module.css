@@ -1,0 +1,49 @@
+.frame8 {
+
+
+
+        box-sizing: border-box;
+
+        /* Auto layout */
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 16px 33px;
+        gap: 8px;
+
+        position: absolute;
+        width: 140px;
+        height: 48px;
+        left: 30.36px;
+        top: 328.63px;
+
+        background: #F39C12;
+        border: 2px solid #252525;
+        box-shadow: 2px 2px 0px #D35400;
+        border-radius: 80px;
+        /* True */
+
+
+        width: 32px;
+        height: 16px;
+
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        /* identical to box height, or 114% */
+
+        text-align: center;
+
+        color: #FFFFFF;
+
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+}

@@ -1,4 +1,4 @@
-import BookInfo from '../Common/BookInfo'
+import BookInfo from '../../pages/TrainReading/BookInfo'
 function Test() {
     return <>
         <BookInfo />

@@ -1,0 +1,41 @@
+@media screen {
+
+        .frame14 {
+
+
+
+                /* Auto layout */
+
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 0px;
+                gap: 20px;
+
+                width: 119px;
+                height: 25px;
+
+
+                /* Inside auto layout */
+
+                flex: none;
+                order: 1;
+                flex-grow: 0;
+
+                box-sizing: border-box;
+
+                position: absolute;
+                /* width: 200px;
+height: 959px;
+left: 0px;
+top: 0px; */
+
+                background: #FFFFFF;
+                border: none;
+                /* Input box shadow E1 */
+
+                /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05); */
+                /* border-radius: 0px 40px 40px 0px; */
+
+        }
+}

@@ -1,0 +1,26 @@
+.body {
+  background: #f5f5f5;
+}
+.in {
+  box-sizing: border-box;
+  position: absolute;
+  width: 183.5px;
+  height: 100px;
+  left: 211px;
+  top: 494.3px;
+  background: #ffffff;
+  border: 1.5px solid #252525;
+  border-radius: 20px;
+}
+.out {
+  box-sizing: border-box;
+  position: absolute;
+  width: 183.5px;
+  height: 100px;
+  left: 215px;
+  top: 600.61px;
+  background: #7d56a5;
+  border: 1.5px solid #252525;
+  border-radius: 20px;
+  transform: matrix(1, -0.07, -0.07, -1, 0, 0);
+}

@@ -1,12 +1,12 @@
-
-import Header from "./Header";
-import Nav from "./Nav";
-import Popup from "./Popup";
-import { Outlet, Route, Routes } from "react-router-dom";
-import Test from "../test/Test";
-import PushUpInstructions from '../Common/PushUpInstructions'
-import BookInfo from "../Common/BookInfo";
-
+import Test from "../../test/Test";
+import Header from "../header";
+import Nav from "../Nav";
+import Popup from "../Popup";
+import { Outlet, Route, Routes } from "react-router-dom"
+//import TextArea from "../common/TextArea/Index";
+//import Context from "../../../context";
+import BookInfo from "../../../pages/TrainReading/BookInfo";
+import PushUpInstructions from "../../Common/PushUpInstructions"
 
 
 function Main() {
@@ -14,6 +14,7 @@ function Main() {
     <>
       <Header />
 
+      {/* content */}
       <Routes>
         {/* Team A */}
         <Route path="teams-path">

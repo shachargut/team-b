@@ -1,0 +1,42 @@
+@media (min-width: 320px) and (max-width: 600px) {
+  .inside {
+    box-sizing: border-box;
+    position: absolute;
+    width: 183.5px;
+    height: 100px;
+    left: 0px;
+    background-color: #7d56a5;
+    border: 2px solid #252525;
+    z-index: -1;
+    border-radius: 20px;
+    transform: rotate(3.2deg);
+  }
+  .graf {
+    box-sizing: border-box;
+    position: absolute;
+    width: 183.5px;
+    height: 100px;
+    left: 2.5%;
+    top: 112.05px;
+    background: #ffffff;
+    border: 2px solid #252525;
+    border-radius: 20px;
+  }
+  .word {
+    width: 81px;
+    height: 20px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #252525;
+    flex: none;
+    z-index: 0;
+    order: 1;
+    flex-grow: 0;
+  }
+}
