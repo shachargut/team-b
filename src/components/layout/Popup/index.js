@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import PushUpInstructions from "../../Common/PushUpInstructions";
+import PushUpInstructions from "../../../pages/TrainReading/PushUpInstructions";
 import "./style.css";
 
 export default function Popup() {

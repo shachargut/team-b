@@ -1,22 +1,13 @@
-<<<<<<< HEAD:src/components/layout/Main.js
-import Header from "./Header";
-import Nav from "./Nav";
-import Popup from "./Popup";
+import Nav from "../Nav";
+import Popup from "../Popup";
 import { Outlet, Route, Routes } from "react-router-dom";
-import Test from "../test/Test";
-import PushUpInstructions from "../Common/PushUpInstructions";
-import PushUpTimer from "../Common/PushUpTimer";
-import BookInfo from "../Common/BookInfo";
-=======
+import PushUpInstructions from "../../../pages/TrainReading/PushUpInstructions";
+import BookInfo from "../../Common/BookInfo";
+import PushUpTimer from "../../Common/PushUpTimer";
 import Test from "../../test/Test";
 import Header from "../header";
-import Nav from "../Nav";
-import Popup from "../popup/Popup";
-import { Outlet, Route, Routes } from "react-router-dom"
-import TextArea from "../common/TextArea/Index";
-import Context from "../../../context";
-
->>>>>>> 67480f9c441bcb10a0bd8ce910d0742857bd762c:src/components/layout/Main/index.js
+// import TextArea from "../common/TextArea/Index";
+// import Context from "../../../context";
 
 function Main() {
   return (

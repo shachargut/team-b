@@ -1,9 +1,9 @@
-import PushUpInstructions from "../Common/PushUpInstructions";
+import PushUpTimer from "../Common/PushUpTimer";
 
 function Test() {
   return (
     <>
-      <PushUpInstructions />
+      <PushUpTimer />
     </>
   );
 }

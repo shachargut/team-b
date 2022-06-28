@@ -1,0 +1,27 @@
+.squareButton {
+    box-sizing: border-box;
+  
+    /* Auto layout */
+    display: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 7px;
+    gap: 8px;
+  
+    width: 70px;
+    height: 70px;
+  
+    background: #feefec;
+    border: 1.5px solid #252525;
+    /* 1 */
+  
+    box-shadow: 2px 2px 0px #d35400;
+    border-radius: 20px;
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
