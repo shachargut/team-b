@@ -7,15 +7,21 @@ import { Outlet, Route, Routes } from "react-router-dom"
 //import Context from "../../../context";
 import BookInfo from "../../../pages/TrainReading/BookInfo";
 import PushUpInstructions from "../../Common/PushUpInstructions"
+import popupContext from "../../../context/popupContext";
+import { useContext } from "react";
+import TrainReading from "../../../pages/TrainReading/Bookdetails";
 
 
 function Main() {
+  const { popup } = useContext(popupContext)
+
   return (
     <>
       <Header />
 
       {/* content */}
       <Routes>
+
         {/* Team A */}
         <Route path="teams-path">
           <Route index element={<>team's components</>} />
@@ -23,8 +29,10 @@ function Main() {
         </Route>
 
         {/* Team B */}
-        <Route path="train-reading">
-          <Route index element={<Popup />} />
+        <Route path="train-reading" >
+
+          <Route index element={<TrainReading />} />
+          {/* <Route index element={<Popup />} /> */}
           <Route path="book-info" element={<BookInfo />} />
           <Route path="instructions" element={<PushUpInstructions />} />
         </Route>
@@ -68,12 +76,17 @@ function Main() {
 
         {/* Test */}
         <Route path='/test' element={<Test />} />
-
-
       </Routes>
 
+
+
+      {popup &&
+        <Popup bookDetails={{ name: 'example', genre: 'roman' }} />
+      }
+
       <Nav />
-      <Popup />
+
+
     </>
   );
 }

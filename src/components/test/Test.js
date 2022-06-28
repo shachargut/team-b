@@ -1,7 +1,9 @@
-import BookInfo from '../../pages/TrainReading/BookInfo'
+// import BookInfo from '../../pages/TrainReading/BookInfo'
+import SubmitBtn from '../Common/SubmitBtn';
 function Test() {
+    console.log("test");
     return <>
-        <BookInfo />
+        <SubmitBtn />
     </>
 }
 
