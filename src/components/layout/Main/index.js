@@ -6,14 +6,20 @@ import { Outlet, Route, Routes } from "react-router-dom"
 // import TextArea from "../common/TextArea/Index";
 import TeamH from "../../teams/TeamH";
 import Training from "../../../pages/FreeStyle/Training"
-
 import Exercise from "../../../pages/TrainReading/Level/Exercise"
 import ExerciseClock from "../../../pages/TrainReading/Level/ExerciseClock"
 import ExerciseQuestion from "../../../pages/TrainReading/Level/ExerciseQuestion"
 import ExerciseRate from "../../../pages/TrainReading/Level/ExerciseRate"
 import ExerciseResult from "../../../pages/TrainReading/Level/ExerciseResult"
 // import TeamC from '../../teams/TeamC'
-
+//---- נא לקבל שינויים לפופאפ קונטקטס -team-b
+import { useContext } from "react";
+import { popupContext } from "../../../context/context";
+import BookDetails from "../../../pages/TrainReading/BookDetails";
+import BookInfo from '../../common/BookInfo'
+import PushUpTimer from "../../common/PushUpTimer";
+import PushUpInstructions from "../../../pages/TrainReading/PushUpInstructions";
+//----
 // import Popup from "../Popup/Popup"
 // import {  Route, Routes } from "react-router-dom"
 import CalibrateCam from "../../../pages/TrainFocus/CalibrateCam";
@@ -29,6 +35,7 @@ import StartFocus from "../../../pages/TrainFocus/StartFocus/StartFocus";
 // import Context from "../../../context";
 
 function Main() {
+  const { popup } = useContext(popupContext);
   return (
     <>
       <Header />
@@ -42,9 +49,11 @@ function Main() {
         </Route>
 
         {/* Team B */}
-        <Route path="teams-path">
-          <Route index element={<>team's components</>} />
-          <Route path="components-path" element={<>team's components</>} />
+        <Route path="train-reading">
+          <Route index element={<BookDetails />} />
+          <Route path="book-info" element={<BookInfo />} />
+          <Route path="instructions" element={<PushUpInstructions />} />
+          <Route path="timer" element={<PushUpTimer />} />
         </Route>
 
         {/* Team C */}
@@ -97,7 +106,9 @@ function Main() {
       </Routes>
 
       <Nav />
-      {/* <Popup /> */}
+      {popup && (
+        <Popup bookDetails={{ name: "harry potter", genre: "novel" }} />
+      )}
     </>
   );
 }
