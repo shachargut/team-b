@@ -17,7 +17,7 @@ import { useContext } from "react";
 import { popupContext } from "../../../context/context";
 import BookDetails from "../../../pages/TrainReading/BookDetails";
 import BookInfo from '../../common/BookInfo'
-import PushUpTimer from "../../common/PushUpTimer";
+import PushUpTimer from "../../../pages/TrainReading/PushUpTimer";
 import PushUpInstructions from "../../../pages/TrainReading/PushUpInstructions";
 //----
 // import Popup from "../Popup/Popup"
