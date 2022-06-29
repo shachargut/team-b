@@ -62,7 +62,7 @@ export default function Popup({ bookDetails }) {
         <div className="popup ">
           <div className="title">Reading Exercise</div>
           <div className="txt">Are you still reading {bookDetails.name}?</div>
-          <div className="btn">
+          <div className="btnPopup">
             <button className="btn_yes" onClick={yes}>
               Yes
             </button>
