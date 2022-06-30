@@ -1,27 +1,27 @@
-h1 {
-  font-family: "Roboto";
-  text-align: center;
-  margin-bottom: 40px;
+.wrapping{
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-top: 55px;
 }
 
-.timer_wrapper {
-  box-sizing: border-box;
+.wrapClock{
+display: flex;
+justify-content: center;
+padding: 10%;
+gap: 5%;
 
-  position: absolute;
-  width: 262px;
-  height: 262px;
-  left: 76px;
-  top: 256.62px;
-
-  background: #feefec;
-  border: 1.5px solid #000000;
 }
 
 .timer {
   font-family: "Montserrat";
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 
 .text {
@@ -43,8 +43,8 @@ h1 {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
-  font-size: 24px;
-  line-height: 18px;
+  /* font-size: 24; */
+  /* line-height: 18px; */
   /* identical to box height, or 77% */
 
   text-align: center;
@@ -54,67 +54,37 @@ h1 {
 }
 
 .info {
-  max-width: 360px;
+  /* max-width: 360px;
   margin: 40px auto 0;
   text-align: center;
-  font-size: 16px;
+  font-size: 16px; */
 }
-.squarebutton {
-  top: 50%;
-}
-.playPause {
-  box-sizing: border-box;
-
-  position: fixed;
-  width: 40px;
-  height: 40px;
-  left: 7%;
-  top: 37%;
-}
-
-.plusMinus {
-  box-sizing: border-box;
-
-  position: relative;
-  border-radius: 50px;
-  width: 40px;
-  height: 40px;
-  left: 357px;
-  top: 430px;
-
-  background: #feefec;
-  border: 1.5px solid #252525;
-  /* 1 */
-
-  box-shadow: 2px 2px 0px #d35400;
-
+.rapid {
   font-family: "Poppins";
   font-style: normal;
-  font-weight: 1000;
-  font-size: 16.32px;
-  line-height: 25px;
-  /* or 179% */
-
-  /* display: flex;
-  align-items: center; */
-
-  color: #000000;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 18px;
 }
-
-.playPauseSign {
-  /* /* position: relative; */
-  /* width: 14.12px; */
-  /* height: 16.47px; */
-  /* left: 199.94px;
-  top: 447.38px; */
-
-  /* background: #252525; */
-}
-
-.plusMinusSign {
-  width: 16.32px;
-  height: 16.32px;
-  color: #5c2680;
-  left: 50%;
+.plusMinus {
+  box-sizing: border-box;
+  /* align-content:center ; */
+  /* justify-content: center; */
+  align-self: center;
   /* text-align: center; */
+  /* position: relative; */
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  /* height: 40%; */
+
+  background: #feefec;
+  border: 2px solid #252525;
+
+  box-shadow: 2px 2px 0px #d35400;
+  font-size: large;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: bold;
+  color: #000000;
 }

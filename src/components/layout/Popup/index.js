@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./style.css";
 import {popupContext} from "../../../context/context";
 import TrueBtn from "../../common/trueBtn";
+import YesBtn from "../../common/yesBtn";
 import SubmitBtn from "../../common/SubmitBtn";
 //import { } from '../../../context'
 // import styles from './style.module.css';
@@ -58,18 +59,14 @@ export default function Popup({ bookDetails }) {
   return (
     <>
       <div className={`overlay ${popup ? "" : "close"}`}>
-        <div className="backpopup"> </div>
-        <div className="popup ">
+        <div className="popup right back-purple">
+          {/* <div className="left back-purple"> */}
           <div className="title">Reading Exercise</div>
           <div className="txt">Are you still reading {bookDetails.name}?</div>
-          <div className="btnPopup">
-            <button className="btn_yes" onClick={yes}>
-              Yes
-            </button>
-            <button className="btn_no" onClick={no}>
-              No
-            </button>
+          <div className=".btnPopup">
+          <YesBtn  handleClickyes={yes} handleClickno={no} yes={"yes"} no={"no"}/>
           </div>
+          {/* </div> */}
         </div>
       </div>
     </>

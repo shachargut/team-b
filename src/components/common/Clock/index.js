@@ -13,15 +13,15 @@ import RoundedButton from "../RoundedButton";
 //  2. "time" with the value 180 for 3 minutes clock.
 //  3. object named "funcs" with the keys: "onPlay","onPause" and "onComplete"
 //     and values which are your functions for those situations.
-//  4. only for freeStyle: "rapid" with a value: functoin that will get current LPM
-//  5. "rapidValue" with a value of the last user's LPM.
+//  4. only for freeStyle: "rapidValue" with a value: functoin that will get current LPM
+//  5. "initRapidValue" with a value of the last user's LPM.
 
 function Clock(props) {
   let freeStyle = props.freeStyle; //Todo: change to props.freeStyle
-  const [play, setPlay] = useState(!freeStyle);
-  const [isplay, setIsPlay] = useState(!freeStyle);
-  let timeInSeconds = 10; //Todo: change to props.time;
-  const [rapid, setRapid] = useState(props.rapidValue);
+  const [play, setPlay] = useState(false);
+  const [isplay, setIsPlay] = useState(false);
+  let timeInSeconds = props.time; //Todo: change to props.time;
+  const [rapidValue, setRapidValue] = useState(props.initRapidValue);
   const [isFinish, setIsFinish] = useState(false);
 
 
@@ -39,7 +39,9 @@ function Clock(props) {
       <div className= {styles.timer}>
         {freeStyle ? (
           <div className={styles.squarebutton}>
-            <SquareButton>{rapid} LPM</SquareButton>
+            <SquareButton>
+              <div className={styles.rapid}>{rapidValue}</div> LPM
+              </SquareButton>
           </div>
         ) : (
           <div className={styles.value}>
@@ -56,16 +58,17 @@ function Clock(props) {
               !freeStyle && setPlay(!play);
               !isplay && props.funcs.onPlay();
               isplay && props.funcs.onPause();
+            console.log(isplay);
             }}
             >
+              <RoundedButton setIsPlay={setIsPlay} isPlay={isplay}></RoundedButton>
             </div>
           )}
           </div>
-          <RoundedButton setIsPlay={setIsPlay} isPlay={isplay}></RoundedButton>
       </div>
     );
   };
-  isplay&&props.funcs.onPlay()
+  // isplay&&props.funcs.onPlay()
 
   return (
     
@@ -75,8 +78,8 @@ function Clock(props) {
         <button
           className={styles.plusMinus}
           onClick={() => {
-            setRapid(rapid + 1);
-            props.funcs.rapid(rapid + 1);
+            setRapidValue(rapidValue + 1);
+            props.funcs.rapid(rapidValue + 1);
           }}
         >
           +
@@ -91,6 +94,7 @@ function Clock(props) {
           onComplete={() => ({ shouldRepeat: false, delay: 1 })}
           trailColor={"#FEEFEC"}
           strokeLinecap={"square"}
+          size={200}
         >
           {renderTime}
         </CountdownCircleTimer>
@@ -99,8 +103,8 @@ function Clock(props) {
         <button
           className={styles.plusMinus}
           onClick={() => {
-            rapid > 0 && setRapid(rapid - 1);
-            props.funcs.rapid(rapid - 1);
+            rapidValue > 0 && setRapidValue(rapidValue - 1);
+            props.funcs.rapid(rapidValue - 1);
           }}
         >
           -
