@@ -5,12 +5,12 @@ fieldset {
     border-radius: 0.8rem;
     /* height: 13vh; */
     height: 85px;
-    width: 400px;
+    width: 90%;
     /* width: 90%; */
     /* margin: 0.3rem; */
     margin-top: 15px;
     /* margin-left: 50px; */
-    display: flex;
+    /* display: flex; */
     /* border: #7D839D; */
     margin-right: auto;
 margin-left: auto;

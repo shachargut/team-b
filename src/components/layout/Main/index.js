@@ -14,9 +14,10 @@ import ExerciseResult from "../../../pages/TrainReading/Level/ExerciseResult"
 // import TeamC from '../../teams/TeamC'
 //---- נא לקבל שינויים לפופאפ קונטקטס -team-b
 import { useContext } from "react";
-import { popupContext } from "../../../context/context";
+import { dataContext } from "../../../context/context";
 import BookDetails from "../../../pages/TrainReading/BookDetails";
 import BookInfo from "../../../pages/TrainReading/BookInfo"
+import FourQues from "../../../pages/TrainReading/FourQues";
 import PushUpTimer from "../../../pages/TrainReading/PushUpTimer";
 import PushUpInstructions from "../../../pages/TrainReading/PushUpInstructions";
 //----
@@ -35,12 +36,12 @@ import StartFocus from "../../../pages/TrainFocus/StartFocus/StartFocus";
 // import Context from "../../../context";
 
 function Main() {
-  const { popup } = useContext(popupContext);
+  const { popup } = useContext(dataContext);
   return (
     <>
       <Header />
 
-      content
+      
       <Routes>
         {/* Team A */}
         <Route path="teama">
@@ -54,6 +55,7 @@ function Main() {
           <Route path="book-info" element={<BookInfo />} />
           <Route path="instructions" element={<PushUpInstructions />} />
           <Route path="timer" element={<PushUpTimer />} />
+          <Route path="Questions" element={<FourQues />} />
         </Route>
 
         {/* Team C */}

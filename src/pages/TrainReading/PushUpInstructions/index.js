@@ -4,12 +4,12 @@ import styles from "./style.module.css";
 import { useContext, useEffect } from "react";
 //import Text from "../../../components/Common/Text";
 import { useNavigate, useLocation } from "react-router-dom";
-import { pageNameContext } from "../../../components/layout/Layout";
+import { dataContext } from "../../../components/../context/context";
 //import SubmitBtn from "../../../components/Common/SubmitBtn";
 import FooterStart from "../../../components/common/FooterStart";
 
 function PushUpInstructions(props) {
-  const { pageName, setPageName } = useContext(pageNameContext);
+  const { pageName, changePageName } = useContext(dataContext);
   const navigate = useNavigate();
   const location = useLocation();
   //  debugger
@@ -20,10 +20,10 @@ function PushUpInstructions(props) {
   let instructionsText;
   useEffect(() => {
     console.log("send from insreuction", nevigateObject.roundCounter)
-    if(nevigateObject.roundCounter==1){setPageName(`Pushup ${nevigateObject.roundCounter}/4`)}
-    else if(nevigateObject.roundCounter==3) {setPageName(`Pushup ${nevigateObject.roundCounter-1}/4`);}
-    else if(nevigateObject.roundCounter==5) {setPageName(`Pushup ${nevigateObject.roundCounter-2}/4`);}
-    else if(nevigateObject.roundCounter==7) {setPageName(`Pushup ${nevigateObject.roundCounter-3}/4`);}
+    if(nevigateObject.roundCounter==1){changePageName(`Pushup ${nevigateObject.roundCounter}/4`)}
+    else if(nevigateObject.roundCounter==3) {changePageName(`Pushup ${nevigateObject.roundCounter-1}/4`);}
+    else if(nevigateObject.roundCounter==5) {changePageName(`Pushup ${nevigateObject.roundCounter-2}/4`);}
+    else if(nevigateObject.roundCounter==7) {changePageName(`Pushup ${nevigateObject.roundCounter-3}/4`);}
     
   }, []);
   nevigateObject.roundCounter === 4

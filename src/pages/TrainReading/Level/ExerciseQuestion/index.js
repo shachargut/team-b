@@ -1,6 +1,6 @@
 import styles from './style.module.css';
 import React, { useContext } from 'react'
-import { pageNameContext } from '../../../../components/layout/Layout'
+import { dataContext } from '../../../../components/../context/context'
 import Questions from "../../../../components/common/Questions";
 import SubmitBtn from "../../../../components/common/SubmitBtn";
 
@@ -8,7 +8,7 @@ import SubmitBtn from "../../../../components/common/SubmitBtn";
 
 
 export default function QuestionsLevel() {
-  const pageInfo = useContext(pageNameContext)
+  const pageInfo = useContext(dataContext)
   pageInfo.setPageName("QuestionsLevel")
   return (
     <>

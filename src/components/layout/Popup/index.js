@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import "./style.css";
-import {popupContext} from "../../../context/context";
+import {dataContext} from "../../../context/context";
 import TrueBtn from "../../common/trueBtn";
 import YesBtn from "../../common/yesBtn";
 import SubmitBtn from "../../common/SubmitBtn";
@@ -11,36 +11,9 @@ import SubmitBtn from "../../common/SubmitBtn";
 export default function Popup({ bookDetails }) {
   // const [data, setData] = useState("")
   // const [loading, setLoading] = useState(true)
-  const { popup, setPopup } = useContext(popupContext);
+  const { popup, changePopupState } = useContext(dataContext);
   const navigate = useNavigate();
-  // console.log(popup);
 
-  // useEffect(() => {
-  //     async function getBook() {
-  //         const url = "http://localhost:3001/api/book/book";
-  //         const res = await fetch(url);
-  //         const data = await res.json();
-
-  //         setData(data)
-  //         // debugger;
-  //         setLoading(false)
-  //         if (data.length == 0) {
-  //             console.log("no data")
-  //             navigate('/train-reading/book-info')
-  //         }
-  //         else {
-  //             setPopup(true)
-  //             console.log(data);
-  //         }
-  //     }
-  //     getBook()
-  // }, [])
-  // console.log(data);
-  // if (loading) {
-  //     return <div></div>
-  // }
-  // console.log(data);
-  //debugger;
   const nevigateObject = {
     bookName: bookDetails.name,
     genre: bookDetails.genre,
@@ -48,11 +21,11 @@ export default function Popup({ bookDetails }) {
   };
 
   const yes = () => {
-    setPopup(false);
+    changePopupState(false);
     navigate("/train-reading/instructions", { state: { nevigateObject } });
   };
   const no = () => {
-    setPopup(false);
+    changePopupState(false);
     navigate("/train-reading/book-info");
   };
 

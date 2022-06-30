@@ -26,7 +26,7 @@ function ClockTB(props) {
     props.setPlay(false)
     //showContinue()
     nevigateObject.roundCounter++
-    navigate("/train-reading/instructions",{state:{nevigateObject}})   
+    navigate("/train-reading/Questions",{state:{nevigateObject}})   
 
   }
 

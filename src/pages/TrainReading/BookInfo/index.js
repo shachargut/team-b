@@ -57,21 +57,24 @@
 // export default BookInfo
 
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./style.module.css";
 import SubmitBtn from '../../../components/common/SubmitBtn';
 import Input from '../../../components/common/InputValid'
-
+import { dataContext } from "../../../components/../context/context";
 // Creator : Team B - Shahar
 function BookInfo(props) {
+    const { pageName, changePageName } = useContext(dataContext);
     const navigate = useNavigate();
     const [bookName, setBookName] = useState("");
     const [genre, setGenre] = useState("");
 
     const [bookValid, setBookValid] = useState(true)
     const [ganerValid, setGenreValid] = useState(true)
-
+    useEffect(()=>{
+        changePageName("Book Info")
+    },[])
 
     function insertBook() {
         console.log("enter");
