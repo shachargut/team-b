@@ -12,6 +12,7 @@ function PushUpInstructions(props) {
   const { pageName, changePageName } = useContext(dataContext);
   const navigate = useNavigate();
   const location = useLocation();
+  const earphonesImg = require("../../../assets/img/headphone.png")
   //  debugger
   const nevigateObject = location.state.nevigateObject;
   const round = nevigateObject.roundCounter
@@ -44,8 +45,10 @@ function PushUpInstructions(props) {
       <div id="playDiv">
         <FooterStart
           startFunction={() => startRound()}
-          title="With your headphones on,"
+          title="Start Now"
+          subtitle = "With your headphones on,"
           explanation={instructionsText}
+          img = {earphonesImg}
         />
       </div>
     </>

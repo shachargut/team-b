@@ -42,7 +42,7 @@ export default function Popup({ bookDetails }) {
   };
   const no = () => {
     changePopupState(false);
-    navigate("/train-reading/book-info");
+    navigate("/train-reading/book-info",{ state: { nevigateObject } });
   };
 
   return (
