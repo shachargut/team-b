@@ -109,7 +109,7 @@ function Main() {
 
       <Nav />
       {popup && (
-        <Popup bookDetails={{ name: "harry potter", genre: "novel" }} />
+        <Popup />
       )}
     </>
   );

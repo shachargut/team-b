@@ -11,14 +11,30 @@ import SubmitBtn from "../../common/SubmitBtn";
 export default function Popup({ bookDetails }) {
   // const [data, setData] = useState("")
   // const [loading, setLoading] = useState(true)
-  const { popup, changePopupState } = useContext(dataContext);
-  const navigate = useNavigate();
+  const { popup, changePopupState, userDetails  } = useContext(dataContext);
 
+  const navigate = useNavigate();
+  
   const nevigateObject = {
-    bookName: bookDetails.name,
-    genre: bookDetails.genre,
+    bookName: userDetails.currentBook.name,
+    genre: userDetails.currentBook.genre,
     roundCounter: 1,
+    lpm:userDetails.TR[userDetails.TR.length-1].Value,
+    formInfo:{},
+    rateData:{
+      LPM:0,
+    newLPM: 0,
+    round:0,
+    justRight: false
+    }
   };
+
+  // const nevigateObject = {
+  //   bookName: userDetails.currentBook.name,
+  //   genre: userDetails.currentBook.genre,
+  //   roundCounter: 1,
+  //   lpm:userDetails.TR[TR.lenght-1].value
+  // };
 
   const yes = () => {
     changePopupState(false);
@@ -35,7 +51,7 @@ export default function Popup({ bookDetails }) {
         <div className="popup right back-purple">
           {/* <div className="left back-purple"> */}
           <div className="title">Reading Exercise</div>
-          <div className="txt">Are you still reading {bookDetails.name}?</div>
+          <div className="txt">Are you still reading {userDetails.currentBook.name}?</div>
           <div className=".btnPopup">
           <YesBtn  handleClickyes={yes} handleClickno={no} yes={"yes"} no={"no"}/>
           </div>

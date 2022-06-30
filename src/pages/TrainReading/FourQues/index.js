@@ -28,7 +28,8 @@ export default function FourQues(){
         else if(q4.trim().length==0){ setVq4(false)}
         else {
             if(nevigateObject.roundCounter<=7){navigate("/train-reading/instructions",{state:{nevigateObject}})}
-            else{navigate("/train_reading_level/exercise",{state:{nevigateObject}})}
+            else{console.log(nevigateObject);
+                navigate("/train_reading_level/exercise",{state:{nevigateObject}})}
     }
 }
 

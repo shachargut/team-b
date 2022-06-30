@@ -1,13 +1,15 @@
 import React from 'react'
 import { useState, useEffect, useRef } from 'react';
+import { useLocation } from "react-router-dom";
 
 
 
 function AudioChangeRate(props){
-
+    const location = useLocation();
+    const nevigateObject = location.state.nevigateObject;
     const audioRef = useRef();
     const [lpm, setLpm] = useState(56);
-    let lpmFile = pickFile(lpm);
+    let lpmFile = pickFile(nevigateObject.lpm);
     useEffect(() => {
         const audio = require(`../../../assets/audio/wush_${lpmFile}_1min.mp3`);
         audioRef.current.src = audio;
@@ -77,6 +79,7 @@ function pickFile(lpm) {
     if (lpm - array[index] > array[index + 1] - lpm) {
         index++;
     }
+    console.log(lpm+"/"+array[index]);
     return array[index];
 }
 
