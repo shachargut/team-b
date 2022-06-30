@@ -23,9 +23,9 @@ export default function Popup({ bookDetails }) {
     formInfo:{},
     rateData:{
       LPM:0,
-    newLPM: 0,
-    round:0,
-    justRight: false
+      newLPM: 0,
+      round:0,
+      justRight: false
     }
   };
 

@@ -46,18 +46,6 @@ function BookInfo(props) {
             // console.log(bookName);
             nevigateObject.bookName=bookName;
             nevigateObject.genre=genre;
-            const nevigateObject = {
-                bookName: bookName,
-                genre: genre,
-                roundCounter: 1,
-                lpm:11,
-                formInfo:{},
-                rateData:{
-                  LPM:0,
-                  newLPM: 0,
-                round:0,
-                justRight: false
-                }}
             navigate("/train-reading/instructions", { state: { nevigateObject } });
 
         }
